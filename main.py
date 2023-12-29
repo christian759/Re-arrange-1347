@@ -35,7 +35,7 @@ def lixt(func):
 
 # function that provide all possible combinations of the letters in "entry"
 @lixt
-def possible(entry:str, word:int)-> tuple:
+def possible(entry:str, word:int) -> list:
     global add_to
     add_to = 0
     while add_to <= word:
@@ -45,12 +45,12 @@ def possible(entry:str, word:int)-> tuple:
         for i in words:
             Lists.append(i)
     return Lists
-    
+
 
 def filtering(Liste):
     for i in Liste:
         k = bool(all_words.check(i))
-        if k == True:
+        if k:
             if len(i) == 1:
                 pass
             elif len(i)==2:
@@ -59,6 +59,7 @@ def filtering(Liste):
                 ans.append(i)
     s = set(ans)
     return s
+
 
 # Runner Code
 if __name__ == "__main__":
