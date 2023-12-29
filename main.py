@@ -12,6 +12,8 @@ from itertools import permutations
 # declaring global lists and variables
 global Lists
 Lists = []
+global ans
+ans = []
 global times
 global Liste
 Liste = [] 
@@ -51,8 +53,12 @@ def filtering(Liste):
         if k == True:
             if len(i) == 1:
                 pass
+            elif len(i)==2:
+                pass
             else:
-                print(i)
+                ans.append(i)
+    s = set(ans)
+    return s
 
 # Runner Code
 if __name__ == "__main__":
@@ -60,9 +66,7 @@ if __name__ == "__main__":
     word = len(entry)
     possible(entry, word)
     print(f"Possible words from that can be formed from {entry} are: ")
-    filtering(Liste)
     
 
 """ happy coding """
-    
     
