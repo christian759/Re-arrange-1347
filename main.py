@@ -66,6 +66,7 @@ if __name__ == "__main__":
     word = len(entry)
     possible(entry, word)
     print(f"Possible words from that can be formed from {entry} are: ")
+    print(filtering(Liste))
     
 
 """ happy coding """
